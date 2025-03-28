@@ -122,7 +122,7 @@ for airportcode in airports:
 			color = Color(0,255,0)
 			print "IFR"
 		elif flightCateory == "IMC":
-			color = Color(255,255,0)
+			color = Color(0,255,255)
 			print "IMC"
 	else:
 		color = Color(255,255,255)
