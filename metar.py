@@ -95,7 +95,8 @@ for metar in root.iter('METAR'):
 print mydict
 
 rainbowCycle(strip)
-
+	if airportcode == "NULL":
+	colorWipe(strip, Color(0,0,0), 10)
 
 
 i = 0
@@ -114,15 +115,15 @@ for airportcode in airports:
 		if flightCateory == "VFR":
 			print "VFR"
 			color = Color(255,0,0)
-		elif flightCateory == "MVFR":
+		elif flightCateory == "VMC":
 			color = Color(0,0,255)
-			print "MVFR"
+			print "VMC"
 		elif flightCateory == "IFR":
 			color = Color(0,255,0)
 			print "IFR"
-		elif flightCateory == "LIFR":
-			color = Color(0,128,128)
-			print "LIFR"
+		elif flightCateory == "IMC":
+			color = Color(255,255,0)
+			print "IMC"
 	else:
 		color = Color(255,255,255)
 		print "N/A"
